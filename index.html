@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñador Freelancer</title>
+    <link rel="stylesheet" href="css/normalize.css"><!-- Le aplicamos normalize.css para que se vea lo mas parecido en todos los navegadores -->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet"><!-- Para fuente -->
+    <link rel="preload" href="css/styles.css" as="styles">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script><!-- Para iconos -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></script><!-- Para iconos -->
+
+<body>
+    <header>
+        <h1 class="titulo">Kevin Higuera <span> Freelancer </span>  </h1>
+    </header>
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="#">Inicio</a>
+        <a href="#">Sobre mi</a>
+        <a href="#">Clientes</a>
+        <a href="#">Contacto</a>
+    </nav>
+</div>
+    <style>
+        .fa-location-dot {
+            color: yellow;
+            font-size: 100px;
+        }
+    </style>
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2 >Diseño y desarrollo web <span>Freelancer</span> </h2>
+            <div class="ubicacion">
+                <p><i class="fa-solid fa-location-dot"></i><!-- Al colocar el logotipo dnetro del parrafo, se pone alineado horizontalmente el logotipo y el texto -->
+                    Campo General Angostura Sinaloa</p>
+            </div>
+
+            <a class="button" href="#">Contactar</a>
+
+        </div><!-- Div de clase contenido-hero -->
+        
+    </section>
+
+
+    <style>
+        .fa-palette {
+            color: rgb(231, 89, 33);
+            font-size: 60px;
+        }
+
+        .fa-android {
+            color: rgb(19, 151, 30);
+            font-size: 60px;
+        }
+
+        .fa-apple {
+            color: rgb(168, 179, 180);
+            font-size: 60px;
+        }
+
+        .fa-credit-card {
+            color: rgb(56, 56, 160);
+            font-size: 60px
+        }
+    </style>
+    <main class="contenedor sombra">
+        <h2>Mis Servicios</h2>
+        <div class="services">
+            <section class="service">
+                <h3>Diseño Web</h3>
+                <div class="iconos">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit harum velit
+                    repellat iste
+                    distinctio at!</p>
+            </section>
+
+            <section class="service">
+                <h3>Aplicaciones Moviles</h3>
+                <div class="iconos">
+                    <i class="fa-brands fa-android"></i>
+                    <i class="fa-brands fa-apple"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit harum velit
+                    repellat istedistinctio at!</p>
+            </section>
+            <section class="service">
+               <h3>E-Comerce</h3>
+               <div class="iconos">
+                <i class="fa-regular fa-credit-card"></i>
+               </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit harum velit
+                    repellat istedistinctio at!</p>
+            </section>
+        </div><!-- Div de clase services-->
+        <section>
+            <h2>Contacto</h2>
+            <form class="formulario"><!-- Para formulario -->
+                <fieldset><!-- Todos pertenecen a un formulario, es para  agregar en campos el contenido -->
+                    <legend>Contáctanos llenando todos los campos</legend>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label for="">Name</label><!-- Etiqueta para dar indicaciones -->
+                            <input class="input-text" type="text" placeholder="My Name"><!-- text: para poner texto, checkbox: para seleccionar opciones, radio: para seleccionar una opcion o otra -->
+                        </div>
+                        <div class="campo">
+                            <label for="">Number</label>
+                            <input class="input-text" type="Tel" placeholder="My Number">
+                        </div>
+                        <div class="campo">
+                            <label for="">Email</label>
+                            <input class="input-text" type="email" placeholder="micorreo@gmail.com">
+                        </div>
+                        <div class="campo">
+                            <label for="">Message</label>
+                            <textarea class="input-text" name="" id="" cols="40" rows="5" placeholder="I write my message"></textarea>
+                        </div>
+                    </div>
+                <div class="aling-right flex">
+                    <input class="button w-sm-100" type="submit" value="Send">
+                </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Todos los derechos reservados. Kevin Higuera Freelancer</p>
+    </footer>
+   
+</body>
+
+</html>

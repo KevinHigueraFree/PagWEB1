@@ -1,0 +1,300 @@
+/*SELECTORES*/
+/*DE ELEMENTO*/
+/*h1 span{} Lo aplica a todos los span que pertenezcan a un h1*/
+/*span{} Lo aplica a todos los span que existan*/
+
+/*DE CLASE*/
+/*.cliente{} se peude crear multiples veces(es reutilizable) e inicia con un punto* /
+
+/*SELECTOR DE ID*/
+/* #cliente{} Puedes tener multiples ID's por pagina pero sus nombre no pueden repetirse por pagina*/
+
+/*SELECTOR DE ATRIBUTO*/
+/*[src="logo.jpg"]{}Selecciona elementos basados en algun atributo que tenga*/
+
+/*COMBINACION DE DESCENDIENTES*/
+/*.cliente .nombre{} Selecciona los elementos hijos cuyo padre sea una clase (o ID) en especifico*/
+
+/*TODOS LOS HIJOS*/
+/* .cliente > p{} Aplica a la siguiente regla a todos los parrefos hijos cuyo padre sea elemento que tiene la clase cliente*/
+
+:root{/*es un pseudocodigo que no existe en html pero sirve para almacenar variables de css  "custom propertis"*/
+    --white: #ffffff;
+    --black: #212121;
+    --primary: #FFC107;
+    --secundary: #0097A7;
+    --grey: #757575;
+    --grey-light: #DFE9F3;
+}
+/* Generales */
+html{
+    font-size: 62.5%;/*Indica el porcentaje del tamaño original que se le aplicara a todo lo que tiene el html*/
+    box-sizing: border-box; /* Es para que el tamaño de la caja incluya el tamaño del border dentro del tamaño sin afacetar  a los elementos */
+    scroll-snap-type: y mandatory;/* Scroll-nap de arriba hacia abajo */
+
+
+}
+*, *:before, *:after {/* El * es para aplicarlo a todos los elmentos */
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grey-light) 0%, var(--white) 100%);/*Para aplicar degradado a  el fondo  */
+}
+.sombra{ /*Para aplicar sombras a los contenedores*/
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.43);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.43);
+    background-color: white;
+    padding: 2rem; /*Para que el bloque  tenga en su interior 2 rem de separado de su texto interior*/
+    border-radius: 3rem;
+}
+/* Tipografia */
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+/* .titulo{
+    text-align: center;/* Para alinear al centro 
+    font-size: 3.8rem;
+    color: var(--primary);
+    /*text-transform: uppercase;/*Para mayusculas
+    font-weight: 400;
+} 
+*/
+
+/* Titulos */
+.titulo span{
+    font-size: 2rem;
+
+}
+
+/* UTILIDADES */
+.w-sm-100{
+    width: 100%;
+}
+@media (min-width: 760px) {
+    .w-sm-100{
+        width:auto;
+    }
+}
+.flex{/* Para aplicar el display flex */
+    display: flex;
+}
+.aling-right{/* Para alinear al la derecha */
+    justify-content: flex-end;
+   
+}
+
+.contenedor{/*Creamos esta clase para centrar contenidos*/
+    max-width: 120rem; /*120rem=1200px max-width es el largo que ndra si se puede, */
+    margin-top: 0px;/*margin-top indica la separacion del elemento anterior*/
+    margin-right: auto;/*margin-top separacion hacia la izquierda*/
+    margin-bottom: 2rem;/*Separacion hacia abajo*/
+    margin-left: auto;
+
+    margin: 0 auto 2rem auto;/*Para simplificar todo lo anterior*/
+}
+.button{
+    background-color: var(--secundary);
+    color: var(--white);
+    padding: 1rem 2rem;/*LO que abarcara el bloque despues de la letrahacia arriba/abajo y hacia los lados */
+    margin-top: 2rem;/* Para tener separacion del elemento anterior */
+    font-size: 2rem;/* Tamaño del texto */
+    text-decoration:none;/*Quitar cualquier decoracion al texto*/
+    text-transform:uppercase;/* Para hacer mayusculas las letras */
+    font-weight: 700;/* Para hacer negritas las letras */
+    border-radius: 2rem;/* Para redondear los bordes el boton */
+    width: 60%;/*Para   que abarque el 60% de la pagina bloque*/
+    text-align: center;/* Para alinear el  texto */
+    border: none;
+}
+/* Navegacion principal */
+.nav-bg{
+    background-color: var(--secundary);
+}
+
+.navegacion-principal{
+    
+    display:flex;/* Habilita el flexbox */
+    flex-direction: column;/*Determinar la direccion en la que se modificara*/
+}
+@media (min-width:480px ) {
+    .navegacion-principal{
+        flex-direction:column;
+    }
+}
+@media (min-width: 768px) {
+    .navegacion-principal{/* Se agregan todos los valores que .navegacion principal tenia */
+        flex-direction: row;
+        justify-content:space-between ;/* Para modificarlos horizontalmente */
+    }
+    .button{
+        width:auto;
+    }
+}
+@media (min-width: ) {
+    
+}
+
+
+.navegacion-principal a{/* Le aplicamos un color de fondo a las etiquetas a de la clase navegacion-principal */
+    color: var(--white);
+    text-decoration: none;/* Le quitamos el subrayado a las anclas */
+    font-size: 2rem;
+    font-weight:700  ;/*Negritas bold*/
+    padding: 1rem;/* Es lo que abarcara alrededor el elemento a */
+}
+.navegacion-principal a:hover{/* Hover es cuando el selector (mouse) esta sobre la etiquita a de la clase navegacion-principal */
+   background-color: var(--primary);
+   color: var(--black);
+}
+/* p{
+    background-color: var(--primary);
+} */
+
+/* Hero */
+.hero{
+    background-image: url(../img/hero.jpg) ;/* Fondo de la imagen,dentro de URL va la direccion d ela imagen, Para retroceder un carpeta usamos ../ */
+    background-repeat: no-repeat;/* La imagen no se repite */
+    background-size: cover;/* El tamaño de la imagen cubrrira todo el ancho disponible*/
+    height: 400px;/* La altura que tendra */
+/*     padding: 2rem;/*   el marco que tendra hacia arriba y  abajo */
+    position:relative ;/*Posicion relativa para el contenedor padre*/
+    margin-bottom: 2rem;/* Para separar el siguiente contenedor de este */
+}
+.contenido-hero{
+    position:absolute;/* Para que el hijo pueda aplicar propiedades especificas */
+    background-color: rgba(0,0,0,.5);/*rgba para aplicar un color y el nivel de transparencia que tiene*/
+    background-color: rgb(0 0 0/70%);/*Es nuevo metodo para aplicar trasparencia*/
+    width:100%;/*Abarca el 100% de ancho*/
+    height: 100%;/* Abarcsa el 100% de altura */
+
+    display: flex;/* Colocar los elemento de izquierda a derecha */
+    flex-direction: column;/* Colocarlos de arriba hacia abajo */
+    align-items: center;/* Alinardlos al centro */
+    justify-content: center;/* Justificarlos al centrp del bloque */
+}
+.contenido-hero h2, .contenido-hero p{ 
+    color:var(--white);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+.services, .navegacion-principal, .formulario{
+    scroll-snap-align: center; /* Para indicar el centro como posicion de ajuste */
+    scroll-snap-stop:always;/* Siempre se pare */
+}
+
+@media (min-width: 768px) {
+    .services{
+        display: grid;/* Para habilitar  la funcion grid es parecida a flexbox */
+    /*     grid-template-columns: 33.3%, 33.3%, 33.3%;/*3 columnas donde ocuparan 33.3% del total*/
+     /*     grid-template-columns: 1fr 1fr 1fr;/* Definimos 3 columnas de 1 fraccion del total */
+        grid-template-columns: repeat(3, 1fr);/* Repetir 1fr o 33.3% 3 veces */
+       /* grid-template-rows: 200px 300px; /* Definimos dos filas de 200 y 300 */
+        /*grid: 300px 300px 300px, 200px 300px;/* Con esto estamos diciemmdo lo mismo que en lo anterior */
+        column-gap: 5rem; /*separacion entre secciones*/
+        /*row-gap: 2rem;/* separacion entre filas */
+        
+    }
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;/* Para centrar el contenido  verticalmente*/
+}
+.service h3{
+    color:var(--secundary);/* Aplicar color a la fuente */
+    font-weight:700;/* Negritas bold */
+}
+.service p{
+    line-height: 2;/* Interlineado */
+    text-align: center;
+}
+.service .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;/* Para centrarlos verticalmente */
+    align-items: center;/* Para centrarlos horizontalmente */
+    
+}
+
+
+/*CONTACTO */
+.formulario{
+    background-color: var(--grey);
+    width: min(60rem, 100%);/* Utilizar el valor mas pequeño 6orem  o 100% para asignarle el ancho a este formmulario d*/
+    margin: 0 auto;/* Utilizarlo cuando es un elemento de tipo block y su padre no es display flex */
+    padding: 1rem;/* Espacio que se aplica en su interior */
+    border-radius: 2rem;
+}
+.formulario fieldset{/* PropiedAD DE */
+border: none;
+
+}
+.formulario legend{
+    text-align: center;
+    color: var(--primary);/* Asignamos color primario a la fuente */
+    font-weight: 700;/* Negritas bold */
+    font-size: 1.8rem;/* Tamaño */
+    text-transform: uppercase;/* Transformar en mayusculas */
+    margin-bottom: 2rem;/* Que separe el elemnto siguiente de abajo */
+
+}
+@media (min-width: 760px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);/* Crear dos columnas con una fraccion cada una */
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;/* Para  hacer la separación de columnas */
+
+    }
+    .campo:nth-child(3), 
+    .campo:nth-child(4){/* Seleccionamos la clase campo numero 3 */
+    grid-column:1/3;/* indicamos abarcara de la linea 1 a la 3-*/
+    }
+}
+
+.contenedor-campos{
+
+}
+.campo{
+
+}
+.campo label{
+    color:var(--white);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: block;/* Para separarlos por bloques */
+}
+/* .campo input[Type="text"]{/*  Es para aplicarle caraceristiccas a un input cuyo tipo sea text*/
+.campo textarea{
+    height: 18rem;
+}  
+.input-text{
+    border-radius: 0.5rem;
+    border:none;
+    width:100%;
+    padding: 1.5rem;
+}
+
+/* FOOTER */
+.footer{
+    text-align: center;
+}
+
